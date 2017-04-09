@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Dashboard</title>
+
+  <!-- Bootstrap CSS and MBD and Font-->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/mdb.css" rel="stylesheet">
+  <link href="assets/css/font.css" rel="stylesheet">
+
+  <!-- custom CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">
+      <strong>Dashboard</strong>
+    </a>
+  </nav>
+
+  <div class="side-menu">
+    <ul>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Summary</a></li>
+    </ul>
+  </div>
+
+  <div class="container main-content">
+    <div class="row">
+      <div class="col-md-5">
+
+        <div class="col-md-12 left-card">
+          <div class="card">
+            <h5 class="card-header primary-color white-text">Profile</h5>
+            <div>
+              <img src="assets/img/avatar.png" class="img-fluid" alt="" style="float: left;width: 140px;">
+              <div class="details">
+                <span class="">Pankaj Sarkar</span><br>
+                <span class="">22, Male</span><br>
+                <span class="">IIT Kharagpur</span><br>
+                <span class=""><a href="#">pankajmkd@gmail.com</a></span><br>
+                <span class="">(+91)-9932668593</span>
+              </div>
+            </div>
+          </div>
+        </div><br>
+
+        <div class="col-md-12 left-card">
+          <div class="card">
+            <h5 class="card-header primary-color white-text">Performance details of 1st Year</h5>
+            <div>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Sub No.</th>
+                    <th>Sub Name</th>
+                    <th>L-T-P-C</th>
+                    <th>Grade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>CY11001</td>
+                    <td>Chemistry</td>
+                    <td>3-1-0-4</td>
+                    <td>A</td>
+                  </tr>
+                  <tr>
+                    <td>MA10001</td>
+                    <td>Mathematics-I</td>
+                    <td>3-1-0-4</td>
+                    <td>C</td>
+                  </tr>
+                  <tr>
+                    <td>ME10001</td>
+                    <td>Mechanics</td>
+                    <td>3-1-0-4</td>
+                    <td>B</td>
+                  </tr>
+                  <tr>
+                    <td>PH11001</td>
+                    <td>Physics</td>
+                    <td>3-1-0-4</td>
+                    <td>D</td>
+                  </tr>
+                  <tr>
+                    <td>CY11001</td>
+                    <td>Mathematics-I</td>
+                    <td>3-1-0-4</td>
+                    <td>B</td>
+                  </tr>
+                  <tr>
+                    <td>MA10002</td>
+                    <td>Mathematics-II</td>
+                    <td>3-1-0-4</td>
+                    <td>A</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div><br>
+
+      </div>
+      <div class="col-md-7 admin-panel">
+        <div class="card">
+          <h5 class="card-header primary-color white-text">Percentage Over the Years</h5>
+          <div class="view right primary-color">
+            <canvas id="results"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="align-middle"><strong>© 2015 Balodis Technologies </strong> 2016. All rights reserved</p>
+    </div>
+  </footer>
+
+  
+  
+  <!-- JQuery -->
+  <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap JavaScript n MDB -->
+  <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+
+  <script>
+    $(function() {
+      var data = {
+        labels: ["AISSCE", "1st Year", "2nd Year", "3rd Year", "4th Year"],
+        datasets: [{
+          label: "CGPA",
+          fillColor: "rgba(220,220,220,0.2)",
+          strokeColor: "rgba(220,220,220,1)",
+          pointColor: "rgba(220,220,220,1)",
+          pointStrokeColor: "#fff",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(0,0,0,.15)",
+          data: [90.8, 80, 88, 75, 83],
+          backgroundColor: "#4CAF50"
+        }]
+      };
+
+      var option = {
+        responsive: true,
+        scaleFontColor: "#fff",
+        defaultFontFamily: "'Ubuntu', sans-serif",
+        scaleGridLineColor: "rgba(255,255,255,.1)",
+        scaleShowVerticalLines: false,
+      };
+
+      var ctx = document.getElementById("results").getContext('2d');
+      var myLineChart = new Chart(ctx).Line(data, option);
+    });
+  </script>
+
+</body>
+
+</html>

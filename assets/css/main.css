@@ -1,0 +1,104 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.navbar{
+  padding: 2px 20px;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 0;
+}
+
+.side-menu{
+  position: fixed;
+  background: #3b3b3b;
+  height: 100%;
+  width: 220px;
+}
+.side-menu ul{
+  margin-top: 16px;
+}
+
+.side-menu ul li a{
+  display: block;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: white;
+}
+.side-menu ul li a:hover{
+  background: #2f2f2f;
+}
+.main-content{
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.left-card{
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.card-header{
+  padding: 7px 16px;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.table-bordered{
+  margin-bottom: 0;
+}
+.table td, .table th{
+  padding: 3px;
+}
+
+thead th{
+  text-align: center;
+}
+
+table tr td:nth-child(3){
+  text-align: center;
+}
+
+table tr td:nth-child(4) {
+  font-weight: bold;
+  text-align: center;
+}
+
+.admin-panel .card{
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.details{
+  display: inline-block;
+  padding-left: 14px;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.details span:nth-child(1){
+  font-weight: bold;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background-color: #111111;
+  font-size: 13px;
+}
+.footer p{
+  color: #777777;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.footer p strong{
+  color: #bbbbbb;
+}
